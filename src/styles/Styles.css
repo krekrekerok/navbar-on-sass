@@ -1,0 +1,17 @@
+@import url(c:\Users\Karina\Desktop\makers\React\projects\sass-lesson\src\components\Navbar\assets\Navbar.css);
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.h-100 {
+  height: 100%;
+}
+/*# sourceMappingURL=Styles.css.map */

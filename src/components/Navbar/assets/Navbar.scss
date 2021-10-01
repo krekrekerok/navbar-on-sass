@@ -1,0 +1,125 @@
+@import "../../../variables/Variables.scss";
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: $backgroundColor;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-areas: "nav-left nav-right";
+    color: #fff;
+}
+
+.nav-left {
+    grid-area: nav-left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    cursor: pointer;
+    span {
+        margin-top: 5px;
+        color: $yellowColor;
+        font-family: $robotoFont;
+        font-weight: 300;
+    }
+}
+.nav-right {
+    grid-area: nav-right;
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
+    font-family: $latoFont;
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        .nav-item{
+            margin-left: 18px;
+            cursor: pointer;
+            transition: .9s all ease;
+            input{
+                background-color: $yellowColor;
+                border-radius: 10px;
+                border: none;
+                padding: 5px;
+                outline: none;
+                &::placeholder {
+                    color: #000;
+                }
+            }
+            text-decoration-color: $yellowColor;
+            &:hover {
+                text-decoration: underline;
+                text-underline-offset: 4px;
+                text-decoration-color: $yellowColor;
+            }
+        }
+        @media all and (max-width: 992px) {
+            display: none;
+        }
+    }
+    .nav-btn{
+        display: none;
+        button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            img{
+                width: 30px;
+                margin-top: 8px;
+            }
+        }
+        @media all and (max-width: 992px) {
+            display: block;
+        }
+    }
+}
+
+.navbar-mobile{
+    // display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    top: 0;
+    z-index: 1;
+    transition: .7s all ease;
+    li{
+        font-size: 32px;
+        list-style: none;
+        text-align: center;
+        color:#fff;
+        padding: 20px;
+        &:hover{
+            background: #fff;
+            color: #000;
+        }
+        &:nth-child(4):hover {
+            background: unset;
+            color: unset;
+        }
+        input{
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background-color: $yellowColor;
+            color: #000
+        }
+    }
+}
+
+.cancel-block {
+    text-align: end;
+    padding-top: 15px;
+    span{
+        color: $yellowColor;
+        font-size: 42px;
+        cursor: pointer;
+    }
+}
+
